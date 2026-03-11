@@ -3,6 +3,7 @@ import ChatBox from "./components/ChatBox";
 import ProductCatalog from "./components/ProductCatalog";
 import SidebarLeft from "./components/SidebarLeft";
 import SidebarRight from "./components/SidebarRight";
+import Warehouse from "./components/Warehouse";
 
 const products = [
   {
@@ -104,12 +105,47 @@ export default function Home() {
 
           <SidebarRight />
         </section>
+
+        <div className="pb-16 lg:pb-24">
+          <Warehouse />
+        </div>
       </main>
 
       <footer className="border-t border-amber-200/70 bg-white/80">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <p>Copyright 2026 DemoJapan. All rights reserved.</p>
-          <p>Header - Body - Footer built with Tailwind CSS.</p>
+        <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-600 lg:px-8">
+          <div className="grid gap-6 border-b border-slate-200/80 pb-6 md:grid-cols-3">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-700">
+                Company
+              </p>
+              <h3 className="text-lg font-semibold text-slate-900">DemoJapan Co., Ltd.</h3>
+              <p>
+                We provide curated fashion items, warehouse support, and fast
+                delivery services for retail and wholesale clients.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-700">
+                Contact
+              </p>
+              <p>Phone: 028 3888 9999</p>
+              <p>Email: contact@demojapan.example</p>
+              <p>Hotline: 0901 234 567</p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-700">
+                Address
+              </p>
+              <p>99 Sakura Avenue, Ben Nghe Ward</p>
+              <p>District 1, Ho Chi Minh City</p>
+              <p>Vietnam</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <p>Copyright 2026 DemoJapan. All rights reserved.</p>
+            <p>Header - Body - Footer built with Tailwind CSS.</p>
+          </div>
         </div>
       </footer>
     </div>
