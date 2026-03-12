@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DemoJapan Home",
-  description: "Simple homepage with header, body, and footer using Tailwind CSS",
+  title: "中古品・スクラップ買取",
+  description: "スクラップ、中古品、在庫処分品の買取と引き取りに対応するサービスサイトです。",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -1,9 +1,9 @@
 const productTypes = [
-  "Jackets",
-  "Shirts",
-  "Pants",
-  "Accessories",
-  "New Collection",
+  "解体スクラップ",
+  "水回り設備",
+  "ステンレス処分品",
+  "中古金物",
+  "在庫処分ロット",
 ];
 
 export default function SidebarRight() {
@@ -12,10 +12,10 @@ export default function SidebarRight() {
       <div className="space-y-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rose-700">
-            Sidebar Right
+            買取カテゴリ
           </p>
           <h2 className="mt-2 text-xl font-semibold text-slate-900">
-            Filter by product type
+            品目で選ぶ
           </h2>
         </div>
 
@@ -27,13 +27,13 @@ export default function SidebarRight() {
               className="flex w-full items-center justify-between rounded-lg border border-slate-200 px-3 py-2.5 text-left text-sm text-slate-700 transition hover:border-rose-300 hover:bg-rose-50"
             >
               <span>{type}</span>
-              <span className="text-xs font-semibold text-rose-500">Filter</span>
+              <span className="text-xs font-semibold text-rose-500">選択</span>
             </button>
           ))}
         </div>
 
         <div className="rounded-lg bg-slate-900 p-3 text-sm text-slate-200">
-          Use both sidebars together to quickly narrow products by material and category.
+          素材とカテゴリを組み合わせると、売却したい品目をすばやく確認できます。
         </div>
       </div>
     </aside>

@@ -2,10 +2,17 @@
 
 import { useState } from "react";
 
-const contactItems = [
+type ContactItem = {
+  label: string;
+  value: string;
+  href: string;
+  className: string;
+};
+
+const contactItems: ContactItem[] = [
   {
     label: "Zalo",
-    value: "0901 234 567",
+    value: "売りたい品の写真を送信",
     href: "https://zalo.me/0901234567",
     className: "bg-sky-500 hover:bg-sky-600",
   },
@@ -16,13 +23,13 @@ const contactItems = [
     className: "bg-emerald-500 hover:bg-emerald-600",
   },
   {
-    label: "Yahoo",
-    value: "demojapan.support",
-    href: "mailto:demojapan.support@yahoo.com",
+    label: "Email",
+    value: "thumua@docunhat.vn",
+    href: "mailto:thumua@docunhat.vn",
     className: "bg-violet-500 hover:bg-violet-600",
   },
   {
-    label: "Phone Number",
+    label: "電話",
     value: "0901 234 567",
     href: "tel:0901234567",
     className: "bg-amber-500 hover:bg-amber-600",
@@ -30,7 +37,7 @@ const contactItems = [
 ];
 
 export default function ChatBox() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
@@ -39,11 +46,11 @@ export default function ChatBox() {
           <div className="flex items-start justify-between bg-slate-900 px-5 py-4 text-white">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">
-                ChatBox
+                クイック相談
               </p>
-              <h3 className="mt-2 text-lg font-semibold">Quick Contact Support</h3>
+              <h3 className="mt-2 text-lg font-semibold">当日見積り対応</h3>
               <p className="mt-1 text-sm text-slate-300">
-                Zalo, WhatsApp, Yahoo, and phone hotline.
+                中古品やスクラップの写真を送っていただければ、すぐに概算見積をご案内します。
               </p>
             </div>
             <button
@@ -81,7 +88,7 @@ export default function ChatBox() {
         className="flex h-16 w-16 items-center justify-center rounded-full bg-[linear-gradient(135deg,#f59e0b_0%,#fb7185_100%)] text-sm font-bold text-white shadow-[0_18px_40px_-18px_rgba(190,24,93,0.6)] transition hover:scale-105"
         aria-label={isOpen ? "Close chat box" : "Open chat box"}
       >
-        Chat
+        相談
       </button>
     </div>
   );

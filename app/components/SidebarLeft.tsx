@@ -1,4 +1,4 @@
-const materials = ["Cotton", "Linen", "Denim", "Silk", "Polyester"];
+const materials = ["ステンレス", "鉄", "銅", "アルミ", "水回り設備"];
 
 export default function SidebarLeft() {
   return (
@@ -6,10 +6,10 @@ export default function SidebarLeft() {
       <div className="space-y-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-700">
-            Sidebar Left
+            絞り込み
           </p>
           <h2 className="mt-2 text-xl font-semibold text-slate-900">
-            Filter by material
+            素材で選ぶ
           </h2>
         </div>
 
@@ -29,7 +29,7 @@ export default function SidebarLeft() {
         </div>
 
         <button className="w-full rounded-lg bg-amber-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700">
-          Apply filters
+          条件を適用
         </button>
       </div>
     </aside>
